@@ -100,3 +100,38 @@ contactInfo[2].textContent = siteContent.contact.phone;
 //FOOTER
 const copyright = document.querySelector('footer p');
 copyright.textContent = siteContent.footer.copyright;
+
+
+//ADD NEW CONTENT
+// ********** change nav text to green
+navList.forEach(item => item.style.color = 'green');
+// ********** add 2 items to navigation using appendChild and prepend
+const nav = document.querySelector('nav');
+const newLink = document.createElement('a');
+newLink.textContent = "Sign In/Up";
+newLink.style.fontWeight = 'bold';
+newLink.style.color = "black";
+nav.appendChild(newLink);
+
+
+// STRETCH
+const compEmoji = "💻";
+nav.prepend(compEmoji);
+const allHeadline4 = document.querySelectorAll('h4');
+allHeadline4.forEach(item => item.prepend('⭐'));
+
+navList.forEach(item => item.style.fontWeight = 'bold');
+startBtn.style.borderRadius = '5px';
+startBtn.prepend('✨');
+const circleImg = document.getElementById('cta-img');
+startBtn.style.boxShadow = '2px 2px 2px black';
+
+const allH4 = Array.from(document.getElementsByTagName('h4'));
+
+allH4.forEach(function(el) {
+  el.style.color = 'green'; 
+  el.style.fontSize = '2em'
+  el.style.textShadow = '2px 2px 5px grey'
+})
+
+footer.style.

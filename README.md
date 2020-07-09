@@ -25,24 +25,24 @@ You have been provided a [JSON object](js/index.js) with all the necessary data 
 
 #### Create selectors to point your data into elements
 
-* [ ] Create selectors by using any of the DOM element's methods
-* [ ] Note that IDs have been used on all images. Use the IDs to update src path content
+* [x] Create selectors by using any of the DOM element's methods
+* [x] Note that IDs have been used on all images. Use the IDs to update src path content
 
 #### Update the HTML with the JSON data
 
-* [ ] Remember, NO direct updating of the HTML source is allowed.
-* [ ] Using your selectors, update the content to match the example file.
-* [ ] Remember to update the src attributes on images
+* [x] Remember, NO direct updating of the HTML source is allowed.
+* [x] Using your selectors, update the content to match the example file.
+* [x] Remember to update the src attributes on images
 
 #### Add new content
 
-* [ ] Change the color of the navigation text to be green.
-* [ ] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
-* [ ] Check your work by looking at the [original html](original.html) in the browser
+* [x] Change the color of the navigation text to be green.
+* [x] Utilize `.appendChild()` and `.prepend()` to add two new items to the navigation system. You can call them whatever you want.
+* [x] Check your work by looking at the [original html](original.html) in the browser
 
 ### Task 2b: Exit Ticket
 
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/wDZyexzhgBwvRbtMb/zghxQdQtGENfLc).
+[x] Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/wDZyexzhgBwvRbtMb/zghxQdQtGENfLc).
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
