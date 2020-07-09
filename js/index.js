@@ -114,7 +114,7 @@ newLink.style.color = "black";
 nav.appendChild(newLink);
 
 
-// STRETCH
+// STRETCH 3a: ADD STYLES
 const compEmoji = "💻";
 nav.prepend(compEmoji);
 const allHeadline4 = document.querySelectorAll('h4');
@@ -134,4 +134,15 @@ allH4.forEach(function(el) {
   el.style.textShadow = '2px 2px 5px grey'
 })
 
-footer.style.
+const footer = document.querySelector('footer');
+footer.style.borderTop = '2px solid black';
+footer.style.fontStyle = 'italic';
+
+//STRETCH 3b : MAKE BUTTON WITH CLICK EVENT
+const myButton = document.createElement('button');
+myButton.textContent = "Change Image";
+myButton.style.margin = '15px 0';
+myButton.addEventListener('click', function(){
+  midImg.src = 'https://picsum.photos/876/182'
+})
+footer.append(myButton);
