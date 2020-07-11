@@ -40,3 +40,114 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//NAIVGATION
+const navList = document.querySelectorAll('nav a');
+
+navList[0].textContent = siteContent.nav["nav-item-1"];
+navList[1].textContent = siteContent.nav["nav-item-2"];
+navList[2].textContent = siteContent.nav["nav-item-3"];
+navList[3].textContent = siteContent.nav["nav-item-4"];
+navList[4].textContent = siteContent.nav["nav-item-5"];
+navList[5].textContent = siteContent.nav["nav-item-6"];
+
+//CTA
+const headline1 = document.querySelector('h1')
+
+headline1.textContent = siteContent.cta.h1
+
+const ctaImg = document.getElementById('cta-img')
+
+ctaImg.src = siteContent.cta["img-src"]
+
+const startBtn = document.querySelector('.cta-text button')
+
+startBtn.textContent = siteContent.cta.button
+
+//MAIN CONTENT
+// ******* TOP
+const topContent =  document.querySelectorAll('.top-content .text-content');
+topContent[0].children[0].textContent = siteContent["main-content"]["features-h4"];
+topContent[0].children[1].textContent = siteContent["main-content"]["features-content"];
+topContent[1].children[0].textContent = siteContent["main-content"]["about-h4"];
+topContent[1].children[1].textContent = siteContent["main-content"]["about-content"];
+
+// ********* MIDDLE
+const midImg = document.getElementById('middle-img');
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+// ********* BOTTOM
+const botContent =  document.querySelectorAll('.bottom-content .text-content');
+
+botContent[0].children[0].textContent = siteContent["main-content"]["services-h4"];
+botContent[0].children[1].textContent = siteContent["main-content"]["services-content"];
+
+botContent[1].children[0].textContent = siteContent["main-content"]["product-h4"];
+botContent[1].children[1].textContent = siteContent["main-content"]["product-content"];
+
+botContent[2].children[0].textContent = siteContent["main-content"]["vision-h4"];
+botContent[2].children[1].textContent = siteContent["main-content"]["vision-content"];
+
+// CONTACT
+const contactHeadline = document.querySelector('.contact h4');
+const contactInfo = document.querySelectorAll('.contact p');
+
+contactHeadline.textContent = siteContent.contact["contact-h4"];
+contactInfo[0].textContent = siteContent.contact.address;
+contactInfo[1].textContent = siteContent.contact.email;
+contactInfo[2].textContent = siteContent.contact.phone;
+
+//FOOTER
+const copyright = document.querySelector('footer p');
+copyright.textContent = siteContent.footer.copyright;
+
+
+//ADD NEW CONTENT
+// ********** change nav text to green
+navList.forEach(item => item.style.color = 'green');
+// ********** add 2 items to navigation using appendChild and prepend
+const nav = document.querySelector('nav');
+const newLink = document.createElement('a');
+newLink.textContent = "Sign In/Up";
+newLink.style.fontWeight = 'bold';
+newLink.style.color = "black";
+nav.appendChild(newLink);
+const compEmoji = "💻";
+nav.prepend(compEmoji);
+
+function addStretchStyles() {
+// STRETCH 3a: ADD STYLES
+const allHeadline4 = document.querySelectorAll('h4');
+allHeadline4.forEach(item => item.prepend('⭐'));
+
+navList.forEach(item => item.style.fontWeight = 'bold');
+startBtn.style.borderRadius = '5px';
+startBtn.prepend('✨');
+const circleImg = document.getElementById('cta-img');
+startBtn.style.boxShadow = '2px 2px 2px black';
+
+const allH4 = Array.from(document.getElementsByTagName('h4'));
+
+allH4.forEach(function(el) {
+  el.style.color = 'green'; 
+  el.style.fontSize = '2em'
+  el.style.textShadow = '2px 2px 5px grey'
+})
+
+const footer = document.querySelector('footer');
+footer.style.borderTop = '2px solid black';
+footer.style.fontStyle = 'italic';
+
+//STRETCH 3b : MAKE BUTTON WITH CLICK EVENT
+const myButton = document.createElement('button');
+myButton.textContent = "Change Image";
+myButton.style.margin = '15px 0';
+myButton.addEventListener('click', function(){
+  midImg.src = 'https://picsum.photos/876/182'
+})
+footer.append(myButton);
+
+}
+
+// uncomment this below to show stretch additons and the button at the foot that will change ethe middle img
+//addStretchStyles()
