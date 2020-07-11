@@ -112,11 +112,11 @@ newLink.textContent = "Sign In/Up";
 newLink.style.fontWeight = 'bold';
 newLink.style.color = "black";
 nav.appendChild(newLink);
-
-
-// STRETCH 3a: ADD STYLES
 const compEmoji = "💻";
 nav.prepend(compEmoji);
+
+function addStretchStyles() {
+// STRETCH 3a: ADD STYLES
 const allHeadline4 = document.querySelectorAll('h4');
 allHeadline4.forEach(item => item.prepend('⭐'));
 
@@ -146,3 +146,8 @@ myButton.addEventListener('click', function(){
   midImg.src = 'https://picsum.photos/876/182'
 })
 footer.append(myButton);
+
+}
+
+// uncomment this below to show stretch additons and the button at the foot that will change ethe middle img
+//addStretchStyles()
